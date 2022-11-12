@@ -156,12 +156,13 @@ export default defineComponent({
 
     }
 
+    /*
     const   handleLoginWithGoogleAccount = async () => {
 
        await loginWithSocialProvider('google')
 
 
-    }
+    }*/
 
 
 
@@ -179,7 +180,7 @@ export default defineComponent({
     return {
       form,
       handleLoginWithEmail,
-      handleLoginWithGoogleAccount,
+      //handleLoginWithGoogleAccount,
 
 
 

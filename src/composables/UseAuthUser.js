@@ -23,7 +23,7 @@ export default function useAuthUser () {
 
   }
 
-  const loginWithSocialProvider = async (myprovider) => {
+ /* const loginWithSocialProvider = async (myprovider) => {
 
     const { user, session, error } = await supabase.auth.signIn({
       provider: myprovider,
@@ -36,7 +36,7 @@ export default function useAuthUser () {
 
     if (error) throw error
     return user,session
-  }
+  } */
 
   const logout = async () => {
     const {user,error} = await supabase.auth.signOut()
@@ -143,7 +143,7 @@ export default function useAuthUser () {
   return {
     user,
     login,
-    loginWithSocialProvider,
+    //loginWithSocialProvider,
     logout,
     isLoggedIn,
     register,
