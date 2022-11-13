@@ -87,6 +87,8 @@ export default defineComponent({
 
         try {
 
+          console.log('voici email : ' , email.value)
+
           await sendPasswordResetEmail(email.value)
 
           notifySuccess("Un email de réinitialisation vient d'être envoyé à : " + email.value)
