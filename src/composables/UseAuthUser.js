@@ -1,15 +1,13 @@
+import {ref} from 'vue'
+//import useSupabase from 'src/supabase' // not necessary
 
-import { ref } from 'vue'
-import useSupabase from 'src/supabase'
-import {useQuasar } from 'quasar'
+import { supabase } from 'src/supabase'
 
 
 const user = ref(null)
 export default function useAuthUser () {
 
-  const $q = useQuasar()
-
-    const {supabase} = useSupabase()
+  //const {supabase} = useSupabase      // not necessary
 
 
   const login = async ({email,password}) => {
