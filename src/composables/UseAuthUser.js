@@ -14,6 +14,7 @@ export default function useAuthUser () {
 
   const login = async ({email,password}) => {
       console.log('on arrive là ')
+      console.log('voici : ', supabase)
       const {user, error} = await supabase.auth.signIn({email,password})
 
       if (error) throw error
