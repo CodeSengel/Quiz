@@ -1,0 +1,7 @@
+{
+  "appId": "com.sengel.code.quiz",
+  "appName": "Quiziw",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

@@ -17,11 +17,11 @@
 
       <q-card-section class="justify-center row  " style="height: 30vh;">
 
-        <div class=" justify-center q-gutter-lg col-12 row  ">
+        <div v-if="answerclicked" class=" justify-center q-gutter-lg col-12 row  ">
           <q-btn v-if="!first" color="green" :label=  "propositions.prop1" class="col-5" @click="handkeCheckAnswer(propositions.prop1)" />
           <q-btn v-if="!first" color="red" :label= "propositions.prop2" class="col-5" @click="handkeCheckAnswer(propositions.prop2)"/>
         </div>
-        <div class=" q-mt-md justify-center q-gutter-lg col-12 row ">
+        <div v-if="answerclicked" class=" q-mt-md justify-center q-gutter-lg col-12 row ">
           <q-btn  v-if="!first" color="indigo" :label= "propositions.prop3" class="col-5" @click="handkeCheckAnswer(propositions.prop3)"/>
           <q-btn  v-if="!first" color="purple" :label= "propositions.prop4" class="col-5" @click="handkeCheckAnswer(propositions.prop4)"/>
         </div>
@@ -84,6 +84,7 @@ export default defineComponent({
     const $q = useQuasar()
     const startthegame = ref(false)
     const answercorrect = ref(null)
+    const answerclicked = ref(false)
     const rows = ref([])
 
 
@@ -199,7 +200,7 @@ export default defineComponent({
 
     const handleimg = (message) => {
 
-
+      answerclicked.value=false
 
 
       if(first.value) {
@@ -268,7 +269,13 @@ export default defineComponent({
       answercorrect.value=null
       setTimeout(() => {
         propositions.value = rows.value[id.value].propositions
+
             }, "1500")
+
+      setTimeout(() => {
+
+        answerclicked.value=true
+            }, "2500")
 
 
 
@@ -289,6 +296,7 @@ export default defineComponent({
       imgurl,
       handleimg,
       propositions,
+      answerclicked,
       handleSwipeRight ({ evt, ...newInfo }) {
 
         handleimg(0)

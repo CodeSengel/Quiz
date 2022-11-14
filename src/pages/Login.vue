@@ -56,7 +56,7 @@
 
 
         </div>
-        <div class="full-width q-pt-md q-gutter-y-sm">
+        <div class="full-width q-pt-md ">
 
           <q-btn
             label="S'inscrire"
@@ -70,7 +70,7 @@
           <q-btn
             label="Mot de passe oublié ? "
             color="white"
-            class="full-width"
+            class="full-width "
             flat
             :to="{name : 'forgot-password'}"
           />
@@ -90,10 +90,23 @@
 
         </div>
 
+        <div class="q-mt-xs" >
 
+            <div class=" col-4" > <q-img  src="~assets/icon.png" /> </div>
+
+        </div>
       </div>
+
+
+
+
     </q-form>
+
+
+
   </q-page>
+
+
 </template>
 
 <script>

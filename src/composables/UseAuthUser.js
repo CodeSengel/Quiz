@@ -82,7 +82,7 @@ export default function useAuthUser () {
 
   const sendPasswordResetEmail = async (email) => {
 
-    console.log('on arrive la 222 :' , supabase.auth)
+
     const { data,error} = await supabase.auth.resetPasswordForEmail(email)
     if (error) throw error
     return data

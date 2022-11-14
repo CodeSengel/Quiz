@@ -1,12 +1,12 @@
 {
-  "name": "qgsap",
+  "name": "quiziw",
   "version": "0.0.1",
   "description": "gsap with quasar",
-  "productName": "qgsap",
+  "productName": "Quiziw",
   "author": "",
   "private": true,
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
+    "icons": "icongenie generate -i mainicon4.png --skip-trim --theme-color 8A2BE2"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -16,10 +16,12 @@
     "quasar": "^2.6.0",
     "supabase": "^1.12.2",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "xcodebuild": "^1.0.2"
   },
   "devDependencies": {
-    "@quasar/app-webpack": "^3.0.0"
+    "@quasar/app-webpack": "^3.0.0",
+    "electron": "^21.2.3"
   },
   "browserslist": [
     "last 10 Chrome versions",
